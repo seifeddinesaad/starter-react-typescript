@@ -1,0 +1,22 @@
+.user__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 0.4rem;
+  & > .title {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(68, 156, 211);
+    font-weight: 500;
+    text-transform: lowercase;
+    align-self: flex-start;
+  }
+  & > .subtitle {
+    font-size: 12px;
+    line-height: 12px;
+    color: rgb(129, 159, 179);
+    font-weight: 400;
+    text-transform: lowercase;
+  }
+}

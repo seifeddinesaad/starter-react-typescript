@@ -1,0 +1,17 @@
+@import '../../assets/styles/base';
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  & > img {
+    width: 40px;
+  }
+  & > span {
+    // color: $pure_white;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+}

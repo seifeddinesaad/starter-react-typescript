@@ -1,0 +1,108 @@
+@import '../../assets/styles/base';
+.sidebar {
+  position: relative;
+  height: calc(100vh - 3.6rem);
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-right: 1px solid rgb(183, 180, 180);
+  background-color: #1090e6;
+  z-index: 999;
+  transition: ease 0.5s;
+  & > .sidebar__header {
+    text-align: center;
+    padding: 12px 0;
+  }
+  .container {
+    width: 100%;
+    & > ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      padding: 0;
+
+      & > li {
+        margin: 2px 0;
+        width: 100%;
+        & > a,
+        & > div {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding: 8px;
+          cursor: pointer;
+          &:focus,
+          &:hover,
+          &:visited,
+          &:link,
+          &:active {
+            text-decoration: none;
+          }
+          & > .title {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            & > img {
+              width: 20px;
+              height: 20px;
+              filter: invert(100%);
+            }
+            & > span {
+              margin-left: 18px;
+              color: $pure_white;
+              font-weight: 500;
+              font-size: 16px;
+              text-decoration: none !important;
+            }
+          }
+
+          & > .MuiChip-root {
+            background: transparent !important;
+            color: #ffffffc2 !important;
+            font-size: 14px !important;
+            &.MuiChip-colorSecondary {
+              background: #e94a14 !important;
+              color: white !important;
+            }
+          }
+
+          &.active {
+            background: $darker_white;
+            border-radius: 8px;
+            & > .title {
+              & > span {
+                color: $darker_blue;
+              }
+              & > img {
+                filter: invert(60%) sepia(30%) saturate(904%) hue-rotate(170deg) brightness(64%)
+                  contrast(100%);
+              }
+            }
+            & > .MuiChip-root {
+              color: #18699cc7 !important;
+              &.MuiChip-colorSecondary {
+                background: #e94a14 !important;
+                color: white !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: -300px;
+  }
+}
+.show__sidebar {
+  left: 0 !important;
+}
